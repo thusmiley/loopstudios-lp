@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap')
+
+$white: hsl(0, 0%, 100%)
+$black: hsl(0, 0%, 0%)
+$dark-gray: hsl(0, 0%, 55%)
+$very-dark-gray: hsl(0, 0%, 41%)    
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Alata', sans-serif
+
+h1, h2, h3, button
+    font-family: 'Josefin Sans', sans-serif    
+    text-transform: uppercase
+h1
+    font-size: 40px
+    line-height: 38px
+h2
+    font-size: 32px
+    line-height: 32px
+h3
+    font-size: 24px
+    line-height: 24px
+p
+    font-size: 15px
+    line-height: 25px
+img
+    max-width: 100%
+    display: block
+a
+    text-decoration: none
+    color: $white
+button
+    font-family: 'Alata', sans-serif
+    font-size: 14px
+    line-height: 14px
+    letter-spacing: 5px
+    background-color: #fff
+    padding: 13px 40px
+    cursor: pointer
+    border: 1px solid $black
+a, button
+    transition: 0.3s ease
+main
+    position: relative
+header, footer, .container
+    width: 100%
+    margin: 0 auto
+.container
+    padding-left: calc(8px + 1.5625vw)
+    padding-right: calc(8px + 1.5625vw) 
+@media only screen and (min-width: 1440px)
+    .container, #creations
+        max-width: 1110px
+        margin-left: auto
+        margin-right: auto
+        padding-left: 0
+        padding-right: 0
+    footer, #hero, #intro, #testimonials
+        max-width: 1440px
+        margin-left: auto
+        margin-right: auto
+// Header & nav
+header
+    position: absolute
+    z-index: 1
+    margin-top: 40px
+header .container    
+    display: flex
+    justify-content: space-between
+    align-items: center
+.header-logo
+    z-index: 3
+.close-menu, .open-menu
+    cursor: pointer
+.open-menu.active
+    display: none
+.close-menu, #header-nav
+    position: absolute 
+    display: none
+.close-menu
+    right: calc(8px + 1.5625vw)
+.overlay
+    height: 0
+    width: 100%
+    position: fixed
+    z-index: 1
+    left: 0
+    top: 0
+    background-color: $black
+    overflow-x: hidden
+    transition: 0.5s
+#header-nav.active, .close-menu.active
+    display: block
+    z-index: 2
+#header-nav
+    top: 33vh
+#header-nav a
+    color: $white
+    font-size: 24px
+    line-height: 25px
+    font-weight: 300
+    font-family: 'Josefin Sans', sans-serif 
+    text-transform: uppercase
+#header-nav .underline:not(:last-child)
+    margin-bottom: 24px
+.underline
+    position: relative
+    width: fit-content
+.underline:hover:after
+    content: ""
+    position: absolute
+    width: 40%
+    display: block
+    height: 2px
+    background-color: white
+    bottom: -5px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+@media only screen and (min-width: 769px)
+    header
+        margin-top: 64px
+    .open-menu
+        display: none
+    #header-nav
+        display: flex
+        position: relative
+        top: 0
+    #header-nav a
+        text-transform: none
+        font-size: 15px
+        line-height: 25px
+        font-family: 'Alata', sans-serif
+    #header-nav .underline:not(:last-child)
+        margin-bottom: 0
+        margin-right: 32px
+    h2
+        font-size: 48px
+        line-height: 48px
+// Hero
+#hero
+    background-image: url('./images/mobile/image-hero.jpg')   
+    background-position: top center
+    background-size: cover
+    background-repeat: no-repeat
+    min-height: 650px
+    padding-top: 227px
+#hero h1 
+    color: $white
+    border: 2px solid $white
+    padding: 24px
+@media only screen and (min-width: 481px)
+    #hero h1 
+        font-size: 52px
+        line-height: 50px
+@media only screen and (min-width: 650px)
+    #hero h1 
+        font-size: 62px
+        line-height: 60px
+@media only screen and (min-width: 769px)
+    #hero
+        background-image: url('./images/desktop/image-hero.jpg')   
+        background-position: top center
+        background-size: cover
+        background-repeat: no-repeat
+        padding-top: 227px
+    #hero h1 
+        font-size: 72px
+        line-height: 70px
+        max-width: 650px
+        padding: 40px
+// Intro
+#intro
+    margin-top: 96px
+    text-align: center
+#intro h2 
+    margin-top: 48px
+    margin-bottom: 16px
+#intro picture img
+    margin-left: auto
+    margin-right: auto
+@media only screen and (min-width: 769px)
+    #intro
+        margin-top: 160px
+@media only screen and (min-width: 1025px)
+    #intro .container
+        position: relative
+        text-align: left
+    #intro picture img
+        margin-left: 0
+    .intro-content
+        position: absolute
+        bottom: -1px
+        right: calc(8px + 1.5625vw) 
+        background-color: #fff
+        width: 50%
+        padding: 50px 0 0 50px
+    #intro h2 
+        margin-top: 0
+        margin-bottom: 25px
+@media only screen and (min-width: 1440px)
+    .intro-content
+        padding: 96px 0 0 96px
+        right: 0
+// Our creations
+#creations h2 
+    margin-top: 96px
+    margin-bottom: 48px
+    text-align: center
+.grid
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(8, 120px)
+    gap: 24px
+.creation
+    position: relative
+.creation h3 
+    position: absolute
+    color: $white
+    bottom: 20px
+    left: 20px
+.earth, .arcade, .soccer, .the-grid, .from-above, .pocket,  .curiosity, .fisheye
+    background-repeat: no-repeat
+    background-position: bottom center
+    background-size: cover
+    cursor: pointer
+.creation:hover
+    opacity: 0.6
+.earth
+    background-image: url('./images/mobile/image-deep-earth.jpg')
+.arcade
+    background-image: url('./images/mobile/image-night-arcade.jpg')
+.soccer
+    background-image: url('./images/mobile/image-soccer-team.jpg')
+.the-grid
+    background-image: url('./images/mobile/image-grid.jpg')
+.from-above
+    background-image: url('./images/mobile/image-from-above.jpg')
+.pocket
+    background-image: url('./images/mobile/image-pocket-borealis.jpg')
+.curiosity
+    background-image: url('./images/mobile/image-curiosity.jpg')
+.fisheye
+    background-image: url('./images/mobile/image-fisheye.jpg')
+#creations button
+    max-width: 60%
+    margin: 0 auto 
+#creations button:hover
+    background-color: black
+    color: $white
+@media only screen and (min-width: 481px)
+    .grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(4, 120px)
+    #creations button
+        grid-column-end: span 2
+@media only screen and (min-width: 769px)
+    #creations
+        position: relative
+    #creations h2 
+        text-align: left
+        padding-left: calc(8px + 1.5625vw)
+        margin-top: 184px 
+        margin-bottom: 80px
+    .grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(2, 450px)
+    .earth
+        background-image: url('./images/desktop/image-deep-earth.jpg')
+    .arcade
+        background-image: url('./images/desktop/image-night-arcade.jpg')
+    .soccer
+        background-image: url('./images/desktop/image-soccer-team.jpg')
+    .the-grid
+        background-image: url('./images/desktop/image-grid.jpg')
+    .from-above
+        background-image: url('./images/desktop/image-from-above.jpg')
+    .pocket
+        background-image: url('./images/desktop/image-pocket-borealis.jpg')
+    .curiosity
+        background-image: url('./images/desktop/image-curiosity.jpg')
+    .fisheye
+        background-image: url('./images/desktop/image-fisheye.jpg')
+    #creations button
+        position: absolute
+        top: 0
+        right: calc(8px + 1.5625vw) 
+@media only screen and (min-width: 1025px)
+    .grid
+        gap: 30px
+    .creation
+        background-position: top center
+    .creation h3
+        bottom: 32px
+        left: 40px
+        font-size: 32px
+        line-height: 32px
+@media only screen and (min-width: 1440px)
+    #creations h2 
+        padding-left: 0
+    #creations button
+        right: 0
+// Testimonials
+#testimonials
+    margin-top: 96px
+#testimonials .container
+    position: relative
+.slide-container
+    display: none
+.slide-img, .arrows
+    display: flex
+    justify-content: center
+    align-items: center
+.slide-img, .slide-content
+    background-repeat: no-repeat
+    background-position: top center
+.slide-img
+    background-image: url('./images/pattern-bg.svg')
+    background-size: contain
+    min-height: 308px
+.slide-img img
+    max-width: 254px
+    box-shadow: 0px 8px 12px -9px rgba(0,0,0,0.6)
+    vertical-align: middle
+.arrows
+    position: absolute
+    top: 257px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+    width: fit-content
+    background-color: #fff
+    padding: 14px 17px
+    border-radius: 28px
+    cursor: pointer
+    box-shadow: 0px 8px 12px -9px rgba(0,0,0,0.6)
+.arrows:hover
+    transform: scale(1.1)
+.arrows:active, .arrows:focus, .arrows:focus:active
+    -webkit-tap-highlight-color: transparent
+.arrows img:first-child
+    margin-right: 34px
+.slide-content
+    margin-top: 32px
+    background-image: url('./images/pattern-quotes.svg')
+    background-size: 60px 50px
+    text-align: center
+    color: #202047
+.quote
+    padding-top: 25px
+    font-size: 18px
+    line-height: 24px
+    margin-bottom: 19px
+.name
+    font-weight: bolder
+.job-title
+    color: #B9B9CE
+.fade 
+    animation-name: fade
+    animation-duration: 1.5s
+@keyframes fade 
+    from 
+        opacity: .4
+    to 
+        opacity: 1
+@media only screen and (min-width: 481px)
+    .quote
+        max-width: 40ch
+        margin-left: auto
+        margin-right: auto
+@media only screen and (min-width: 769px)
+    #testimonials
+        margin-top: 184px
+@media only screen and (min-width: 1440px)
+    #testimonials
+        background-image: url('./images/pattern-bg.svg')
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: top right
+    .slide
+        display: flex
+        flex-direction: row-reverse
+        justify-content: space-between
+        align-items: center
+    .slide-img
+        position: relative
+        min-height: 657px
+        background-image: none 
+    .slide-img img
+        max-width: 540px
+        position: absolute
+        right: 0
+    .slide-content
+        background-size: 120px 100px
+        background-position: left 100px top 0
+        z-index: 2
+    .quote
+        padding-top: 64px
+        margin-bottom: 32px
+        font-size: 32px
+        line-height: 44px
+        text-align: left
+        max-width: 30ch
+    .under-quote
+        display: flex
+        text-align: left
+    .name, .job-title
+        font-size: 20px
+        line-height: 38px
+    .name
+        margin-right: 10px
+    .arrows
+        z-index: 3
+        left: 600px
+        top: 575px
+        margin: 0
+        height: fit-content
+// Footer
+footer
+    margin-top: 96px
+    background-color: $black
+footer .container
+    padding-top: 56px 
+    padding-bottom: 56px 
+    color: $white
+    margin: 0 auto 
+footer .container, .footer-nav, .footer-left, .socials
+    display: flex
+    justify-content: center
+    align-items: center
+    text-align: center
+.footer-left, .footer-nav, footer .container
+    flex-direction: column
+.footer-nav
+    margin-top: 32px
+    margin-bottom: 48px
+    font-family: 'Alata', sans-serif
+    font-size: 15px
+    line-height: 25px
+.footer-nav .underline:not(:last-child)
+    margin-bottom: 16px
+.icon
+    padding-bottom: 8px
+    margin-bottom: 8px
+    max-height: 33px
+    cursor: pointer
+.icon:hover
+    border-bottom: 2px solid $white
+.socials
+    margin-bottom: 8px
+.socials .icon:not(:last-child)
+    margin-right: 16px
+footer p 
+    opacity: 0.5
+@media only screen and (min-width: 769px)
+    footer
+        margin-top: 184px
+@media only screen and (min-width: 1025px)
+    footer .container, .footer-nav
+        flex-direction: row  
+    footer .container
+        justify-content: space-between
+        padding-top: 44px 
+        padding-bottom: 33px
+    .footer-left
+        position: relative
+        min-height: 83px
+    .footer-left img
+        position: absolute
+        left: 0
+        top: 0
+    .footer-right, .socials
+        justify-content: flex-end
+    .footer-nav
+        margin-top: 45px
+        margin-bottom: 0
+    .footer-nav .underline:not(:last-child)
+        margin-bottom: 0
+        margin-right: 32px
+    .icon
+        margin-bottom: 0
+    footer p 
+        text-align: right
+@media only screen and (min-width: 1440px)
+    footer
+        // margin-top: 900px
