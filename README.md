@@ -8,21 +8,21 @@
   - [Built with](#built-with)
 
 ## Overview
+
 Loopstudios landing page
 
 ### Screenshot
+
 Desktop Design
 
 ![](./images/desktop-preview.jpg)
 
 ![](./images/slider.jpg)
 
-
 ### Links
 
-- Git URL: https://github.com/thusmiley/clipboard-landing-page.git
-- Live Site URL: https://thusmiley.github.io/clipboard-landing-page/
-
+- Git URL: https://github.com/thusmiley/loopstudios-lp.git
+- Live Site URL: https://thusmiley.github.io/loopstudios-lp/
 
 ### Built with
 

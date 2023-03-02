@@ -53,6 +53,7 @@ button {
   padding: 13px 40px;
   cursor: pointer;
   border: 1px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
 }
 
 a, button {
