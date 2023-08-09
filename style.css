@@ -7,6 +7,7 @@
 
 body {
   font-family: "Alata", sans-serif;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, button {
@@ -213,8 +214,9 @@ header .container {
 
 #hero h1 {
   color: hsl(0, 0%, 100%);
-  border: 2px solid hsl(0, 0%, 100%);
   padding: 24px;
+  background: transparent;
+  border: 2px solid hsl(0, 0%, 100%);
 }
 
 @media only screen and (min-width: 481px) {
@@ -306,6 +308,18 @@ header .container {
 
 .creation {
   position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.creation img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: contrast(70%);
+}
+
+.creation:hover img {
+  transition: all 0.3s ease-in-out;
+  filter: contrast(30%);
 }
 
 .creation h3 {
@@ -313,54 +327,16 @@ header .container {
   color: hsl(0, 0%, 100%);
   bottom: 20px;
   left: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-.earth, .arcade, .soccer, .the-grid, .from-above, .pocket, .curiosity, .fisheye {
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-  cursor: pointer;
-}
-
-.creation:hover {
-  opacity: 0.6;
-}
-
-.earth {
-  background-image: url("./images/mobile/image-deep-earth.jpg");
-}
-
-.arcade {
-  background-image: url("./images/mobile/image-night-arcade.jpg");
-}
-
-.soccer {
-  background-image: url("./images/mobile/image-soccer-team.jpg");
-}
-
-.the-grid {
-  background-image: url("./images/mobile/image-grid.jpg");
-}
-
-.from-above {
-  background-image: url("./images/mobile/image-from-above.jpg");
-}
-
-.pocket {
-  background-image: url("./images/mobile/image-pocket-borealis.jpg");
-}
-
-.curiosity {
-  background-image: url("./images/mobile/image-curiosity.jpg");
-}
-
-.fisheye {
-  background-image: url("./images/mobile/image-fisheye.jpg");
+.creation:hover h3 {
+  color: hsl(0, 0%, 0%);
 }
 
 #creations button {
   max-width: 60%;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 
 #creations button:hover {
@@ -388,46 +364,20 @@ header .container {
     margin-bottom: 80px;
   }
   .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 450px);
-  }
-  .earth {
-    background-image: url("./images/desktop/image-deep-earth.jpg");
-  }
-  .arcade {
-    background-image: url("./images/desktop/image-night-arcade.jpg");
-  }
-  .soccer {
-    background-image: url("./images/desktop/image-soccer-team.jpg");
-  }
-  .the-grid {
-    background-image: url("./images/desktop/image-grid.jpg");
-  }
-  .from-above {
-    background-image: url("./images/desktop/image-from-above.jpg");
-  }
-  .pocket {
-    background-image: url("./images/desktop/image-pocket-borealis.jpg");
-  }
-  .curiosity {
-    background-image: url("./images/desktop/image-curiosity.jpg");
-  }
-  .fisheye {
-    background-image: url("./images/desktop/image-fisheye.jpg");
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 450px);
   }
   #creations button {
     position: absolute;
-    top: 0;
+    top: -30px;
     right: calc(8px + 1.5625vw);
   }
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 380px);
     gap: 30px;
-  }
-  .creation {
-    background-position: top center;
   }
   .creation h3 {
     bottom: 32px;
@@ -437,6 +387,9 @@ header .container {
   }
 }
 @media only screen and (min-width: 1440px) {
+  .grid {
+    grid-template-rows: repeat(2, 447px);
+  }
   #creations h2 {
     padding-left: 0;
   }
@@ -493,6 +446,7 @@ header .container {
   border-radius: 28px;
   cursor: pointer;
   box-shadow: 0px 8px 12px -9px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
 }
 
 .arrows:hover {

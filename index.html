@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Loopstudios landing page" />
+    <meta name="description" content="Loopstudios" />
     <meta name="keywords" content="HTML,CSS,JavaScript, slider" />
     <meta name="author" content="Thu Smiley" />
     <meta property="og:image" content="./images/desktop-preview.jpg" />
@@ -11,10 +11,10 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./images/favicon.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Loopstudios landing page</title>
+    <title>Loopstudios</title>
   </head>
   <body>
     <!-- Header -->
@@ -48,7 +48,7 @@
       <!-- Hero -->
       <section id="hero">
         <div class="container">
-          <h1>Immersive experiences that deliver</h1>
+          <h1 class="gradient-border">Immersive experiences that<br/> deliver</h1>
         </div>
       </section>
 
@@ -78,28 +78,59 @@
       <section id="creations">
         <h2>Our Creations</h2>
         <div class="container grid">
-          <div class="creation earth">
+          <div class="creation">
+            <picture>
+  <source media="(min-width: 769px)" srcset="./images/desktop/image-deep-earth.jpg" />
+  <img src="./images/mobile/image-deep-earth.jpg" alt="earth">
+</picture>
             <h3>DEEP <br />EARTH</h3>
           </div>
-          <div class="creation arcade">
+          <div class="creation"><picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-night-arcade.jpg" />
+            <img src="./images/mobile/image-night-arcade.jpg" alt="arcade">
+</picture>
             <h3>NIGHT <br />ARCADE</h3>
           </div>
-          <div class="creation soccer">
+
+          <div class="creation"><picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-soccer-team.jpg" />
+            <img src="./images/mobile/image-soccer-team.jpg" alt="soccer">
+</picture>
             <h3>SOCCER <br />TEAM VR</h3>
           </div>
-          <div class="creation the-grid">
+          <div class="creation">
+            <picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-grid.jpg" />
+            <img src="./images/mobile/image-grid.jpg" alt="grid">
+</picture>
             <h3>THE <br />GRID</h3>
           </div>
-          <div class="creation from-above">
+          <div class="creation">
+            <picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-from-above.jpg" />
+            <img src="./images/mobile/image-from-above.jpg" alt="from above vr">
+</picture>
             <h3>FROM UP <br />ABOVE VR</h3>
           </div>
-          <div class="creation pocket">
+          <div class="creation">
+            <picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-pocket-borealis.jpg" />
+            <img src="./images/mobile/image-pocket-borealis.jpg" alt="pocket borealis">
+</picture>
             <h3>POCKET <br />BOREALIS</h3>
           </div>
-          <div class="creation curiosity">
+          <div class="creation">
+            <picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-curiosity.jpg" />
+            <img src="./images/mobile/image-curiosity.jpg" alt="curiosity">
+</picture>
             <h3>THE <br />CURIOSITY</h3>
           </div>
-          <div class="creation fisheye">
+          <div class="creation">
+            <picture>
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-fisheye.jpg" />
+               <img src="./images/mobile/image-fisheye.jpg" alt="fisheye">
+</picture>
             <h3>MAKE IT <br />FISHEYE</h3>
           </div>
           <button>SEE ALL</button>
@@ -120,13 +151,11 @@
                 </div>
                 <div class="slide-content">
                   <p class="quote">
-                   “ I’ve been interested in coding for a while but never taken the
-                jump, until now. I couldn’t recommend this course enough. I’m
-                now in the job of my dreams and so excited about the future. ”
+                   “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore adipisci consectetur iusto aperiam cum ab blanditiis minus distinctio, architecto cupiditate sunt voluptatem nihil accusantium quam fugiat, maiores non. Iure, adipisci.”
                   </p>
                   <div class="under-quote">
                     <p class="name">- Tanya Sinclair -</p>
-                    <p class="job-title">UX Engineer</p>
+                    <p class="job-title">Sales Director</p>
                   </div>
                 </div>
               </div>
@@ -142,15 +171,12 @@
                 </div>
                 <div class="slide-content">
                   <p class="quote">
-                    “ If you want to lay the best foundation possible I’d
-                    recommend taking this course. The depth the instructors go
-                    into is incredible. I now feel so confident about starting
-                    up as a professional developer. ”
+                    “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi nisi neque doloremque mollitia, vel possimus aliquid aut excepturi consequuntur quo, aperiam ratione ut assumenda. Officiis.”
                   </p>
                   <div class="under-quote">
 
                     <p class="name">- John Tarkpor -</p>
-                    <p class="job-title">Junior Front-end Developer</p>
+                    <p class="job-title">Marketing Manager</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +255,7 @@
               </svg>
             </div>
           </div>
-          <p>© 2021 Loopstudios. All rights reserved.</p>
+          <p>© 2023 Loopstudios. All rights reserved.</p>
         </div>
       </div>
     </footer>
