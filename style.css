@@ -49,6 +49,8 @@ button {
   font-family: "Alata", sans-serif;
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
+  height: 40px;
   letter-spacing: 5px;
   background-color: #fff;
   padding: 13px 40px;
@@ -246,6 +248,11 @@ header .container {
     padding: 40px;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .break {
+    display: none;
+  }
+}
 #intro {
   margin-top: 96px;
   text-align: center;
@@ -293,6 +300,10 @@ header .container {
     right: 0;
   }
 }
+#creations {
+  position: relative;
+}
+
 #creations h2 {
   margin-top: 96px;
   margin-bottom: 48px;
@@ -302,16 +313,20 @@ header .container {
 .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(8, 130px);
-  gap: 30px;
+  grid-template-rows: minmax(auto, 120px) repeat(8, 120px);
+  gap: 24px;
 }
 
 .creation {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
 }
 
 .creation img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   filter: contrast(70%);
@@ -335,7 +350,7 @@ header .container {
 }
 
 #creations button {
-  max-width: 60%;
+  min-width: 157px;
   margin: 20px auto 0;
 }
 
@@ -369,8 +384,9 @@ header .container {
   }
   #creations button {
     position: absolute;
-    top: -25px;
+    top: 0;
     right: calc(8px + 1.5625vw);
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 1024px) {
